@@ -12,13 +12,13 @@ export const handlers = [
   rest.put(`${API_PATHS.bff}`, (req, res, ctx) => {
     return res(ctx.status(200));
   }),
-  rest.delete(`${API_PATHS.product}/:id`, (req, res, ctx) => {
+  rest.delete(`${API_PATHS.product}/:productId`, (req, res, ctx) => {
     return res(ctx.status(200));
   }),
   rest.get(`${API_PATHS.bff}`, (req, res, ctx) => {
     return res(ctx.status(200), ctx.delay(), ctx.json<AvailableProduct[]>(availableProducts));
   }),
-  rest.get(`${API_PATHS.product}/:id`, (req, res, ctx) => {
+  rest.get(`${API_PATHS.product}/:productId`, (req, res, ctx) => {
     const product = availableProducts.find((p) => p.id === req.params.id);
     if (!product) {
       return res(ctx.status(404));
