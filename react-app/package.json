@@ -5,6 +5,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
+    "buildAndCopy": "tsc && vite build && cp -r dist/* ../aws-app/app",
     "preview": "npm run build && vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { AwsAppStack } from '../lib/aws-app-stack';
+import { S3BucketStack } from '../lib/s3-buket-stack';
 
 const app = new cdk.App();
-new AwsAppStack(app, 'AwsAppStack');
+
+new S3BucketStack(app, 'AwsShopS3Stack');

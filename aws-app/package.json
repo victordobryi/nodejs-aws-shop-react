@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "build-deploy": "tsc && cdk synth && cdk deploy -- --profile=$profile --require-approval=never",
+    "buildAndDeploy": "cd ../react-app && npm run buildAndCopy && cd ../aws-app && npm run build-deploy --profile=$profile"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
