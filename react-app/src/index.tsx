@@ -38,7 +38,7 @@ if (import.meta.env.DEV) {
 const authToken = getToken('authorization_token');
 
 if (!authToken) {
-  localStorage.setItem('authorization_token', 'victordobryi:TEST_PASSWORD');
+  localStorage.setItem('authorization_token', 'dmljdG9yZG9icnlpOlRFU1RfUEFTU1dPUkQ=');
 }
 
 const container = document.getElementById('app');
